@@ -95,6 +95,7 @@ If an option is not specified, then accept the default.
         1. Change `Timeout 300` to `Timeout 30`.
         2. Change all instances of `Options... Indexes`, `Options... FollowSymLinks`, `Options... MultiViews` by adding dashes in front of the option names.
     7. Edit `/etc/apache2/sites-available/sheaconloncom.conf` to be
+        ```ApacheConf
         <VirtualHost *:80>
                 # The files for this site are in /var/sheaconloncom.
                 DocumentRoot /var/sheaconloncom
@@ -123,8 +124,10 @@ If an option is not specified, then accept the default.
                         RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [L]
                 </Directory>
         </VirtualHost>
+        ```
     8. Run `sudo a2ensite sheaconloncom`.
     9. Edit `/etc/apache2/sites-available/devsheaconloncom.conf` to be
+        ```ApacheConf
         <VirtualHost *:80>
                 # The files for this site are in /var/devsheaconloncom.
                 DocumentRoot /var/devsheaconloncom
@@ -153,6 +156,7 @@ If an option is not specified, then accept the default.
                         RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [L]
                 </Directory>
         </VirtualHost>
+        ```
     10. Run `sudo a2ensite devsheaconloncom`.
     11. Run `sudo service apache2 reload`.
     13. Run `sudo mkdir /var/sheaconloncom/`.
