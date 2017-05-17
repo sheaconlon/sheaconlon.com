@@ -1,0 +1,17 @@
+body {
+	/* Child Positioning */
+	display: flex;
+	align-items: center;
+}
+
+#headline {
+	/* Resets */
+	margin-top: 0;
+	margin-bottom: 0;
+
+	/* Positioning and Spacing */
+	margin-bottom: 10%;
+
+	/* Text Style */
+	font-size: 180%;
+}
