@@ -1,0 +1,15 @@
+#contact-information {
+	/* Positioning and Spacing */
+	flex-shrink: 0;
+	flex-grow: 1;
+	padding-top: auto;
+	padding-bottom: auto;
+
+	/* Text Style */
+	font-size: 150%;
+
+	/* Child Positioning */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
