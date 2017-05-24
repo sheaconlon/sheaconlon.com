@@ -32,11 +32,6 @@
 	margin: 10px 0;
 }
 
-.card .caption {
-	width: 100%;
-	font-size: 80%;
-}
-
 .card .description {
 	/* Resets */
 	margin-top: 0;
