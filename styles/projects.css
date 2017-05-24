@@ -43,6 +43,7 @@
 	justify-content: flex-start;
 	margin: 3px 0;
 	font-size: 80%;
+	align-items: flex-start;
 }
 
 .card .tag-set:child{
