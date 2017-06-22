@@ -1,23 +1,20 @@
 # sheaconlon.com
-## Deploy the website
-If an option is not specified, then accept the default.
-1. Go to AWS EC2.
-2. Switch to region `US West`.
-3. Create a VPC.
-    1. Name it `sheaconlon.com-vpc`.
-    2. Choose CIDR block `10.0.0.0/16`.
-    3. Create a subnet.
-        1. Name it `sheaconlon.com-only-subnet`.
-        2. Put it in `sheaconlon.com-vpc`.
-        3. Choose the CIDR block `10.0.0.0/16`.
-4. Launch an instance.
-    1. Choose the image `Ubuntu Server 16.04 LTS`.
-    2. Choose the instance type `t2.nano`.
-    3. Choose as the network `sheaconlon.com-vpc`.
-    4. Choose as the subnet `sheaconlon.com-only-subnet`.
-    5. Enable termination protection.
-    6. Enable detailed monitoring.
-    7. Add tag with key `Name` and value `sheaconlon.com-instance`.
-    8. Create a new security group with name `sheaconlon.com-security-group`.
-    9. Allow SSH, HTTP, and HTTPS from anywhere.
-    10. Create a new key pair names `sheaconlon.com-keypair`. Do not lose or release the key file.
+
+## Deployment
+
+To deploy the website from scratch, follow the [deployment instructions](deployment.md). The instructions walk you through the following:
+
+1. setting up an Ubuntu virtual machine using AWS VPC and EC2
+2. setting up DNS for your domain using AWS Route 53
+3. setting up a site down notification using AWS SNS and Cloudwatch
+4. setting up Apache for separate production and development sites, www to non-www redirection, "clean" URLs, and no server-side scripting
+
+The requirements are a domain name, an Amazon Web Services account, and roughly $6 per month to spend on it. The result is a running instance of this website, or a different website, if you simply paste in different files at the end! The domain name is optional and you could use a t2.micro instead of a t2.nano EC2 instance to take advantage of free tier and pay near $0 per month.
+
+## Workflow
+
+To set up my preferred development workflow, follow the [workflow setup instructions](workflow_setup.md). The instructions walk you through the following:
+
+1. getting Sublime Text 3 and the package Sublime SFTP
+2. configuring Sublime SFTP and `sshd` (only on Mac OS) for remotely editing files on your EC2 instance
+3. configuring `git` for separate production and development branches and `git`-based deployment

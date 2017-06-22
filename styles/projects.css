@@ -1,0 +1,75 @@
+#cards {
+	/* Child Positioning */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	/* Sizing and Positioning */
+	margin: 10px;
+}
+
+.card {
+	/* Sizing and Positioning */
+	box-sizing: border-box;
+	max-width: 800px;
+	flex-basis: 500px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.card .title {
+	width: 100%;
+	font-size: 160%;
+	margin: 0;
+}
+
+.card .preview {
+	width: 100%;
+	height: 200px;
+	margin: 10px 0;
+}
+
+.card .description {
+	/* Resets */
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.card .tag-set {
+	display: flex;
+	justify-content: flex-start;
+	margin: 3px 0;
+	font-size: 80%;
+	align-items: flex-start;
+}
+
+.card .tag-set:child{
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+
+.card .tag-set .tag {
+	padding: 0 3px;
+	margin: 0 5px;
+	border-radius: 5px;
+	border: 1px solid #378ce8;
+	background-color: #eff7fc;
+}
+
+#ml-research-image {
+	width: 100%;
+	height: 100%;
+}
+
+#fractals-canvas {
+	width: 100%;
+	height: 100%;
+}
+
+#sheaconloncom-image {
+	width: 100%;
+	height: 100%;
+}
