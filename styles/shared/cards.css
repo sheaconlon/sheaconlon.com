@@ -1,0 +1,19 @@
+.card_area {
+	/* Child Positioning */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+
+.card {
+	/* Sizing and Positioning */
+	box-sizing: border-box;
+	max-width: 800px;
+	flex-basis: 500px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
